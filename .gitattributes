@@ -1,1 +1,7 @@
 *.pdf binary
+
+# Force LF for shell scripts (important for Render)
+*.sh text eol=lf
+
+# Avoid line ending issues for PDF or binary files
+*.pdf binary
