@@ -50,6 +50,3 @@ dist/
 *.egg-info/
 *.egg
 
-# Environment variables
-.env
-.env.*

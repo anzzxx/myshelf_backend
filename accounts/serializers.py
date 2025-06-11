@@ -36,12 +36,14 @@ class SignupSerilizer(serializers.ModelSerializer):
         username=validate_data.get("username",None)
         first_name=validate_data.get("first_name",None)
         last_name=validate_data.get("last_name",None)
+        phone_number=validate_data.get("phone_number",None)
         user=Accounts.objects.create_user(
             email=email,
             username=username,
             password=password,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
+            phone_number=phone_number
         )
         return user
     
