@@ -15,7 +15,7 @@ Dependency Management: pip, requirements.txt
 Project Setup
 Clone the repository
 
-git clone https://github.com/your-username/myshelf_backend.git
+git clone https://github.com/anzzxx/myshelf_backend.git
 
 cd myshelf_backend
 
