@@ -17,7 +17,7 @@ def generate_unique_username(base):
 # Custom User Manager
 class MyAccountManager(BaseUserManager):
     
-    def create_user(self, email, username=None, password=None, first_name='', last_name='', **extra_fields):
+    def create_user(self, email, username=None, password=None, first_name='', last_name='',phone_number=None, **extra_fields):
         if not email:
             raise ValueError("Users must have an email address")
 
@@ -32,6 +32,8 @@ class MyAccountManager(BaseUserManager):
             username=username,
             first_name=first_name,
             last_name=last_name,
+            phone_number=phone_number,
+            
             **extra_fields
         )
         user.set_password(password)
