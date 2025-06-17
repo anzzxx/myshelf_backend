@@ -8,6 +8,8 @@ venv/
 ENV/
 env/
 
+
+
 # Django specific
 *.log
 *.pot
