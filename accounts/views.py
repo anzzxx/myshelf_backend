@@ -94,6 +94,7 @@ from rest_framework import status
 from django.contrib.auth import get_user_model
 
 class CreateSuperUserAPIView(APIView):
+    permission_classes=[]
     def get(self, request):
         User = get_user_model()
 
