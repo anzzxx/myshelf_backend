@@ -24,6 +24,7 @@ class CreateGenreView(APIView):
     #     genres = Genre.objects.filter(created_by=user)
     #     serializer = GenreCreatingSerilizer(genres, many=True)
     #     return Response({"message":"genre fetched!","data":serializer.data},status=status.HTTP_200_OK)
+    
     def get(self, request):
         user = request.user
         genres = Genre.objects.filter(created_by=user,is_active=True)

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'book',
     'django_filters',
+    'reading_list',
 ]
 
 MIDDLEWARE = [
@@ -179,7 +180,7 @@ from datetime import timedelta
 
 SIMPLE_JWT = {
     # Token lifetimes
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),  # 1 minute is too short for most apps
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=300),  # 1 minute is too short for most apps
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),    # Commonly 7–30 days
 
     # Token rotation & blacklisting
