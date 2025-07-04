@@ -26,7 +26,7 @@ class GenreCreatingSerilizer(serializers.ModelSerializer):
 
 class BookCreateSerilizer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(source='author.first_name', read_only=True)
-    genre = serializers.CharField(source='genre.name', read_only=True)
+    genre = serializers.CharField(source='genre.name')
     class Meta:
         model=Book
         fields="__all__"
